@@ -42,7 +42,7 @@ inline uint64_t encodeMortonKey(uint32_t x, uint32_t y, uint32_t z){
 	result = mortonkeyZ[(z >> 16) & 0xFF] |
 		mortonkeyY[(y >> 16) & 0xFF] |
 		mortonkeyX[(x >> 16) & 0xFF];
-	result = result << 48 |
+	result = result << 24 |
 		mortonkeyZ[(z >> 8) & 0xFF] |
 		mortonkeyY[(y >> 8) & 0xFF] |
 		mortonkeyX[(x >> 8) & 0xFF];
